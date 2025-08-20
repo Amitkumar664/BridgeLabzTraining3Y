@@ -1,4 +1,4 @@
-package BridgeLabzTraining3Y.ArrayPracticeQuestions.level1;
+package ArrayPracticeQuestions.level1;
 
 import java.util.Scanner;
 
