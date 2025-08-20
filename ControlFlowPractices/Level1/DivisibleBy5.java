@@ -1,9 +1,9 @@
-package ControlFlowPractices.level1;
+package ControlFlowPractices.Level1;
 
 import java.util.Scanner;
 
-public class DivisibleByFive {
-      public static void main(String[] args) {
+public class DivisibleBy5 {
+        public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number: ");
         int n = sc.nextInt();
