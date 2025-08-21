@@ -1,5 +1,7 @@
 package ControlFlowPractices.Level1;
 
+import java.util.*;
+
 public class SumFor {
        public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -20,32 +22,6 @@ public class SumFor {
             System.out.println("Sum using loop    = " + sumLoop);
         } else {
             System.out.println("The number " + n + " is not a natural number");
-        }
-        sc.close();
-    }
-}
-14️⃣ Factorial using while loop
-java
-Copy
-Edit
-import java.util.Scanner;
-
-class FactWhile {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a positive integer: ");
-        int n = sc.nextInt();
-
-        if (n >= 0) {
-            long fact = 1;
-            int i = 1;
-            while (i <= n) {
-                fact *= i;
-                i++;
-            }
-            System.out.println("Factorial of " + n + " = " + fact);
-        } else {
-            System.out.println("Please enter a positive integer.");
         }
         sc.close();
     }

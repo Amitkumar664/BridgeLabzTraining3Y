@@ -2,7 +2,7 @@ package ControlFlowPractices.Level1;
 
 import java.util.Scanner;
 
-public class Bonus {
+public class Bonus {  
       public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter salary and years of service: ");
