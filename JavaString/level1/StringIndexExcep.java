@@ -3,39 +3,40 @@ package JavaString.level1;
 import java.util.Scanner;
 
 public class StringIndexExcep {
-     // Method that generates exception (no handling)
-    public void genEx(String str) {
-        System.out.println("Accessing invalid index:");
-        // Accessing character beyond length
-        System.out.println(str.charAt(str.length()));  
+    public static void generateException(String text) {
+        // Access index beyond length (runtime error)
+        System.out.println("Character at invalid index: " + text.charAt(text.length()));
     }
 
-    // Method that handles exception using try-catch
-    public void handleEx(String str) {
-        System.out.println("Handling exception:");
+    // Method to handle the Exception with try-catch
+    public static void handleException(String text) {
         try {
-            // Invalid index access
-            System.out.println(str.charAt(str.length()));
-        } 
-        catch (StringIndexOutOfBoundsException e) {
-            System.out.println("Caught: " + e.getMessage());
-        } 
-        catch (RuntimeException e) {
-            System.out.println("Runtime: " + e.getMessage());
+            // Access index beyond length
+            System.out.println("Character at invalid index: " + text.charAt(text.length()));
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("Caught Exception: " + e);
+        } catch (RuntimeException e) {
+            System.out.println("Caught RuntimeException: " + e);
         }
     }
 
     // Main method
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        StringIndexExcep obj = new StringIndexExcep();
 
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
-        // obj.genEx(input);   // Uncomment to see crash
-        obj.handleEx(input);   // Safe handling
+        // Call method that generates exception
+        System.out.println("\n--- Generating Exception ---");
+        try {
+            generateException(input);
+        } catch (Exception e) {
+            System.out.println("Program stopped abruptly: " + e);
+        }
 
-        System.out.println("Program continues...");
+        // Call method that handles exception
+        System.out.println("\n--- Handling Exception ---");
+        handleException(input);
     }
 }
