@@ -3,20 +3,39 @@ package JavaString.level1;
 import java.util.Scanner;
 
 public class StringIndexExcep {
-     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+     // Method that generates exception (no handling)
+    public void genEx(String str) {
+        System.out.println("Accessing invalid index:");
+        // Accessing character beyond length
+        System.out.println(str.charAt(str.length()));  
+    }
 
-        System.out.print("Enter text: ");
-        String txt = sc.next();
-
-        int index = txt.length(); // invalid index
-
-        if (index >= 0 && index < txt.length()) {
-            System.out.println("Character: " + txt.charAt(index));
-        } else {
-            System.out.println("Invalid index " + index + ". Valid range: 0 to " + (txt.length() - 1));
+    // Method that handles exception using try-catch
+    public void handleEx(String str) {
+        System.out.println("Handling exception:");
+        try {
+            // Invalid index access
+            System.out.println(str.charAt(str.length()));
+        } 
+        catch (StringIndexOutOfBoundsException e) {
+            System.out.println("Caught: " + e.getMessage());
+        } 
+        catch (RuntimeException e) {
+            System.out.println("Runtime: " + e.getMessage());
         }
+    }
 
-        sc.close();
+    // Main method
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        StringIndexExcep obj = new StringIndexExcep();
+
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+
+        // obj.genEx(input);   // Uncomment to see crash
+        obj.handleEx(input);   // Safe handling
+
+        System.out.println("Program continues...");
     }
 }
