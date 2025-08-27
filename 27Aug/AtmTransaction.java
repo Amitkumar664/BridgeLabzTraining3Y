@@ -1,4 +1,3 @@
-package 27Aug;
 
 import java.util.*;
 
@@ -17,7 +16,7 @@ public class AtmTransaction {
     }
     public static void withDepo(int arr[]){
         for(int i=0;i<arr.length;i++){
-            arr[i]=sc.nextInt();
+            // arr[i]=sc.nextInt();
         }
     }
     public static void main(String[] args) {
@@ -27,6 +26,9 @@ public class AtmTransaction {
         int n=sc.nextInt();
         System.out.println("Enter your money you have deposit or withdrawl(-ve)");
         int arr[]=new int[n];
+         for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
         withDepo(arr);
         
         int k=balance(arr);
@@ -41,6 +43,4 @@ public class AtmTransaction {
     }
     
 }
- {
-    
-}
+
