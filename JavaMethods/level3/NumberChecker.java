@@ -1,63 +1,93 @@
 package JavaMethods.level3;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class NumberChecker {
-     // Count digits
-    public static int countDigits(int number) {
-        int count = 0;
-        int temp = number;
-        while (temp > 0) {
-            count++;
-            temp /= 10;
-        }
-        return count;
+      // method to count digits
+    public static int countDigits(int num) {
+        return String.valueOf(num).length();
     }
 
-    // Return digits array
-    public static int[] getDigits(int number) {
-        int count = countDigits(number);
-        int[] digits = new int[count];
-        int temp = number;
-        for (int i = count - 1; i >= 0; i--) {
-            digits[i] = temp % 10;
-            temp /= 10;
+    // method to store digits into array
+    public static int[] getDigits(int num) {
+        String s = String.valueOf(num);
+        int[] d = new int[s.length()];
+        for (int i = 0; i < s.length(); i++) {
+            d[i] = s.charAt(i) - '0';
         }
-        return digits;
+        return d;
     }
 
-    // ✅ Example: Armstrong number
-    public static boolean isArmstrong(int number) {
-        int[] digits = getDigits(number);
-        int count = digits.length;
+    // method to check Duck number
+    public static boolean isDuck(int[] d) {
+        for (int i = 1; i < d.length; i++) { // skip first digit
+            if (d[i] == 0) return true;
+        }
+        return false;
+    }
+
+    // method to check Armstrong number
+    public static boolean isArmstrong(int[] d) {
+        int n = d.length;
         int sum = 0;
-        for (int d : digits) {
-            sum += Math.pow(d, count);
+        for (int x : d) {
+            sum += Math.pow(x, n);
         }
-        return sum == number;
+        int num = 0;
+        for (int x : d) num = num * 10 + x;
+        return sum == num;
     }
 
-    // ✅ Example: Duck number (contains 0, but not starting zero)
-    public static boolean isDuck(int number) {
-        String str = String.valueOf(number);
-        return str.indexOf('0') > 0;
-    }
-
-    // ✅ Example: Palindrome
-    public static boolean isPalindrome(int number) {
-        int[] digits = getDigits(number);
-        for (int i = 0, j = digits.length - 1; i < j; i++, j--) {
-            if (digits[i] != digits[j]) return false;
+    // method to find largest and second largest
+    public static int[] largestTwo(int[] d) {
+        int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE;
+        for (int x : d) {
+            if (x > first) {
+                second = first;
+                first = x;
+            } else if (x > second && x != first) {
+                second = x;
+            }
         }
-        return true;
+        return new int[]{first, second};
     }
 
-    // Add more methods (prime, neon, spy, automorphic, buzz, harshad, etc.)
+    // method to find smallest and second smallest
+    public static int[] smallestTwo(int[] d) {
+        int first = Integer.MAX_VALUE, second = Integer.MAX_VALUE;
+        for (int x : d) {
+            if (x < first) {
+                second = first;
+                first = x;
+            } else if (x < second && x != first) {
+                second = x;
+            }
+        }
+        return new int[]{first, second};
+    }
 
+    // main method
     public static void main(String[] args) {
-        int testNumber = 153;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
 
-        System.out.println("Digits: " + java.util.Arrays.toString(getDigits(testNumber)));
-        System.out.println("Armstrong? " + isArmstrong(testNumber));
-        System.out.println("Duck? " + isDuck(testNumber));
-        System.out.println("Palindrome? " + isPalindrome(testNumber));
+        int digitCount = countDigits(num);
+        int[] digits = getDigits(num);
+
+        System.out.println("Count of digits: " + digitCount);
+        System.out.println("Digits: " + Arrays.toString(digits));
+
+        System.out.println("Duck Number? " + isDuck(digits));
+        System.out.println("Armstrong Number? " + isArmstrong(digits));
+
+        int[] largest = largestTwo(digits);
+        System.out.println("Largest = " + largest[0] + ", Second Largest = " + largest[1]);
+
+        int[] smallest = smallestTwo(digits);
+        System.out.println("Smallest = " + smallest[0] + ", Second Smallest = " + smallest[1]);
+
+        sc.close();
     }
 }
