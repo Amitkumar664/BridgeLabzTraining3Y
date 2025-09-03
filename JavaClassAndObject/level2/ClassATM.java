@@ -1,7 +1,7 @@
 package JavaClassAndObject.level2;
 
 
-class ClassATM {
+public class ClassATM {
     String holder;
     int accNo;
     double balance;
