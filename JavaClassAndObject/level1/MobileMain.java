@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MobileMain {
     public static void main(String[] args) {
+        //taking input
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter Brand: ");

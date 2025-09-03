@@ -1,6 +1,6 @@
 package JavaClassAndObject.level1;
 
-class ClassMobile {
+public class ClassMobile {
     String brand;
     String model;
     double price;
