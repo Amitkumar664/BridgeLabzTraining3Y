@@ -1,7 +1,7 @@
 package JavaClassAndObject.level1;
 
 
-class ClassEmployee {
+public class ClassEmployee {
     String name;
     int id;
     double salary;
