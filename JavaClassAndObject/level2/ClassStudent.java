@@ -1,7 +1,7 @@
 package JavaClassAndObject.level2;
 
 
-class ClassStudent {
+public class ClassStudent {
     String name;
     int rollNo;
     int marks;
