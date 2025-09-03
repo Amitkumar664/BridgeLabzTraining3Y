@@ -1,6 +1,6 @@
 package JavaClassAndObject.level2;
 
-class ClassShoppingCart {
+public class ClassShoppingCart {
     String item;
     double price;
     int qty;
