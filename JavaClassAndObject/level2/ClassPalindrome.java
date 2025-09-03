@@ -1,6 +1,6 @@
 package JavaClassAndObject.level2;
 
-class ClassPalindrome {
+public class ClassPalindrome {
     String text;
 
     ClassPalindrome(String text) {
