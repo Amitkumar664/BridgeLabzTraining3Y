@@ -1,6 +1,6 @@
 package JavaClassAndObject.level1;
 
-class ClassItem {
+public class ClassItem {
     int code;
     String name;
     double price;

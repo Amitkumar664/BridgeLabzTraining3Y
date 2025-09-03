@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ItemMain {
      public static void main(String[] args) {
+
+        //taking input
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter Item Code: ");
