@@ -1,7 +1,7 @@
 package JavaClassAndObject.level1;
 
 
-class ClassCircle {
+public class ClassCircle {
     double radius;
 
     ClassCircle(double radius) {

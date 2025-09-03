@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class CircleMain {
     
      public static void main(String[] args) {
+        //taking input
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter radius: ");
