@@ -1,6 +1,6 @@
 package JavaClassAndObject.level2;
 
-class ClassMovieTicket {
+public class ClassMovieTicket {
     String movie;
     int seatNo;
     double price;

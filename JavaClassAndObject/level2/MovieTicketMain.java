@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MovieTicketMain {
      public static void main(String[] args) {
+        //taking input
         Scanner sc = new Scanner(System.in);
 
         ClassMovieTicket t1 = new ClassMovieTicket();
