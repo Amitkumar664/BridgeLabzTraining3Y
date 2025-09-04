@@ -28,7 +28,7 @@ public class CarRentalClass {
     }
 
     void calcCost() {
-        this.cost = d * 1000; // simple rate
+        this.cost = d * 1000; // simple price or rate
     }
 
     void show() {
