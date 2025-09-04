@@ -4,7 +4,7 @@ public class LibraryBookClass {
      String t;   // title
     String a;   // author
     double p;   // price
-    boolean av; // availability
+    boolean av; // available
 
     LibraryBookClass(String t, String a, double p, boolean av) {
         this.t = t;
