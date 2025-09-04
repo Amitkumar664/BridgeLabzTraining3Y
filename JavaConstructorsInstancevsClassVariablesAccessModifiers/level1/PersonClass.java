@@ -9,7 +9,7 @@ public class PersonClass {
         this.a = a;
     }
 
-    PersonClass(PersonClass p) { // Copy constructor
+    PersonClass(PersonClass p) { // make Copy constructor
         this.n = p.n;
         this.a = p.a;
     }
