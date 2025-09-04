@@ -1,7 +1,7 @@
 package JavaConstructorsInstancevsClassVariablesAccessModifiers.level1;
 
 public class BookClass {
-    String t;   // title
+    String t;   // title 
     String a;   // author
     double p;   // price
 
@@ -11,7 +11,7 @@ public class BookClass {
         this.p = 0.0;
     }
 
-    BookClass(String t, String a, double p) { // Parameterized constructor
+    BookClass(String t, String a, double p) { // Parameterized constructor formed
         this.t = t;
         this.a = a;
         this.p = p;
