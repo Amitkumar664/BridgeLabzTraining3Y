@@ -1,4 +1,4 @@
-// package  ThisStaticFinalKeyWordsAndInstanceOfOperator;
+package  ThisStaticFinalKeyWordsAndInstanceOfOperator;
 
 public class ProductClass {
      private static double discount = 0.0;
