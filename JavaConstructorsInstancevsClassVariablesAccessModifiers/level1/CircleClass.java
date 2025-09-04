@@ -4,7 +4,7 @@ public class CircleClass {
       double r;   // radius
 
     CircleClass() {
-        this(1.0); // chaining
+        this(1.0); // chaining this
     }
 
     CircleClass(double r) {
