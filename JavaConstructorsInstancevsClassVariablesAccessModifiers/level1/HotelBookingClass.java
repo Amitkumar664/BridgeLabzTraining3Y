@@ -17,7 +17,7 @@ public class HotelBookingClass {
         this.n = n;
     }
 
-    HotelBookingClass(HotelBooking hb) { // Copy constructor
+    HotelBookingClass(HotelBookingClass hb) { // Copy constructor
         this.g = hb.g;
         this.rt = hb.rt;
         this.n = hb.n;
