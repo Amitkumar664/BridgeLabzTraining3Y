@@ -1,4 +1,4 @@
-package Sep11;
+package sep11;
 
 public class SavingsAccount extends Account {
     private static final double INTEREST_RATE = 0.04; // 4%

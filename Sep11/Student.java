@@ -1,4 +1,4 @@
-package Sep11;
+package sep11;
 
 public class Student {
     private String name;

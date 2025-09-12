@@ -1,4 +1,4 @@
-package Sep11;
+package sep11;
 
 public class CurrentAccount extends Account {
     private static final double OVERDRAFT_LIMIT = 5000;

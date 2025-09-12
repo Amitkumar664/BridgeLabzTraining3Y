@@ -1,4 +1,4 @@
-package Sep11;
+package sep11;
 
 public class StudentMain {
       public static void main(String[] args) {
